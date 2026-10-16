@@ -10,7 +10,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       new QueryClient({
         defaultOptions: {
           queries: {
-            staleTime: 60 * 1000, // data counts as fresh for 1 minute
+            staleTime: 60 * 1000, // data count as fresh for 1 minute
             retry: 1,
             refetchOnWindowFocus: false,
           },
