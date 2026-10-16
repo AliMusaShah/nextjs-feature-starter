@@ -1,13 +1,14 @@
 import { Card } from "@/components/ui/card"
 
-import type { DashboardStat } from "../types/dashboard-types"
-import { StatIconBadge } from "./stat-icon-badge"
+import { StatIconBadge, type StatTone } from "./stat-icon-badge"
 
 type StatCardProps = {
-  stat: DashboardStat
+  label: string
+  value: number
+  tone: StatTone
 }
 
-function StatCard({ stat }: StatCardProps) {
+function StatCard({ label, value, tone }: StatCardProps) {
   return (
     <Card
       variant="stat"
@@ -15,13 +16,13 @@ function StatCard({ stat }: StatCardProps) {
     >
       <div className="flex flex-col gap-6">
         <p className="text-base leading-none font-medium whitespace-nowrap text-brand-secondary">
-          {stat.label}
+          {label}
         </p>
         <p className="font-secondary text-2xl leading-[1.1] font-bold text-heading">
-          {stat.value}
+          {value}
         </p>
       </div>
-      <StatIconBadge tone={stat.tone} />
+      <StatIconBadge tone={tone} />
     </Card>
   )
 }

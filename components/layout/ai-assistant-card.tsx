@@ -1,6 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 
+import { BubbleIcon } from "@/components/ui/bubble-icon"
+
 type AiAssistantCardProps = {
   onNavigate?: () => void
 }
@@ -16,17 +18,7 @@ function AiAssistantCard({ onNavigate }: AiAssistantCardProps) {
         Stuck on any topic?
       </span>
       <span className="flex items-center gap-2">
-        <span className="relative size-6.5 shrink-0">
-          <span className="absolute inset-[12.5%_12.5%_0.78%_12.5%]">
-            <Image
-              src="/icons/ai-bubble.svg"
-              alt=""
-              width={20}
-              height={23}
-              className="size-full"
-            />
-          </span>
-        </span>
+        <BubbleIcon src="/icons/ai-bubble.svg" className="size-6.5" />
         <span className="text-lg leading-none font-medium tracking-[0.04em] text-brand-foreground uppercase">
           AI Assistant
         </span>

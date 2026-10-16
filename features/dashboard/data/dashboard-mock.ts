@@ -3,10 +3,10 @@ import type { DashboardStat, GameTileData, StreakData } from "../types/dashboard
 export const mockStudentFirstName = "Atia"
 
 export const mockStats: DashboardStat[] = [
-  { id: "score", label: "Total Score", value: 90, tone: "score" },
-  { id: "games", label: "Games Played", value: 5, tone: "games" },
-  { id: "mcqs", label: "Total MCQS", value: 40, tone: "mcqs" },
-  { id: "notes", label: "Total Notes", value: 10, tone: "notes" },
+  { id: "score", label: "Total Score", value: 90, tone: "red" },
+  { id: "games", label: "Games Played", value: 5, tone: "yellow" },
+  { id: "mcqs", label: "Total MCQS", value: 40, tone: "green" },
+  { id: "notes", label: "Total Notes", value: 10, tone: "blue" },
 ]
 
 export const mockGames: GameTileData[] = [

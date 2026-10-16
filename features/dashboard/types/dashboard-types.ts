@@ -1,4 +1,4 @@
-export type StatTone = "score" | "games" | "mcqs" | "notes"
+import type { StatTone } from "@/components/ui/stat-icon-badge"
 
 export type DashboardStat = {
   id: string

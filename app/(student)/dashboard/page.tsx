@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
+import { StatCard } from "@/components/ui/stat-card";
 import {
   mockGames,
   mockStats,
   mockStreak,
   mockStudentFirstName,
   PlayGamesCard,
-  StatCard,
   StreakTrackerCard,
   WelcomeBanner,
 } from "@/features/dashboard";
@@ -29,7 +29,7 @@ export default function DashboardPage() {
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {mockStats.map((stat) => (
             <li key={stat.id}>
-              <StatCard stat={stat} />
+              <StatCard label={stat.label} value={stat.value} tone={stat.tone} />
             </li>
           ))}
         </ul>

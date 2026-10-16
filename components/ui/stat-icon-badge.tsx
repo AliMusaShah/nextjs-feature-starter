@@ -6,19 +6,23 @@ const statIconBadgeVariants = cva(
   {
     variants: {
       tone: {
-        score: "bg-stat-score",
-        games: "bg-stat-games",
-        mcqs: "bg-stat-mcqs",
-        notes: "bg-tertiary-fixed-dim",
+        red: "bg-stat-score",
+        yellow: "bg-stat-games",
+        green: "bg-stat-mcqs",
+        blue: "bg-tertiary-fixed-dim",
       },
     },
     defaultVariants: {
-      tone: "score",
+      tone: "red",
     },
   }
 )
 
-type StatIconBadgeProps = VariantProps<typeof statIconBadgeVariants>
+type StatTone = NonNullable<VariantProps<typeof statIconBadgeVariants>["tone"]>
+
+type StatIconBadgeProps = {
+  tone?: StatTone
+}
 
 function StatIconBadge({ tone }: StatIconBadgeProps) {
   return (
@@ -35,3 +39,4 @@ function StatIconBadge({ tone }: StatIconBadgeProps) {
 }
 
 export { StatIconBadge }
+export type { StatTone }

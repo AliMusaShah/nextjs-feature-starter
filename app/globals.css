@@ -17,6 +17,11 @@
   --color-surface-bright: var(--surface-bright);
   --color-surface-variant: var(--surface-variant);
   --color-secondary-container: var(--secondary-container);
+  --color-error: var(--error);
+  --color-tab-track: var(--tab-track);
+  --color-primary-container: var(--primary-container);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-scheme-primary: var(--scheme-primary);
   --color-secondary-fixed-dim: var(--secondary-fixed-dim);
   --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
   --color-on-primary-fixed: var(--on-primary-fixed);
@@ -118,6 +123,10 @@
   --surface-bright: #f6fbf3;
   --surface-variant: #dce5db;
   --secondary-container: #d2e8d4;
+  --error: #ba1a1a;
+  --primary-container: #b1f1c2;
+  --primary-fixed-dim: #95d5a7;
+  --scheme-primary: #2d6a45;
   --secondary-fixed-dim: #b6ccb9;
   --tertiary-fixed-dim: #a2cdda;
   --on-primary-fixed: #00210e;
@@ -137,6 +146,7 @@
   --streak-from: #ffab4b;
   --streak-to: #ffe551;
   --arena-ring: #6cd3fa;
+  --tab-track: #e8f6e8;
 }
 
 .dark {
@@ -182,7 +192,7 @@
   --shadow-tile: 0 4px 4px 0 rgb(0 0 0 / 4%);
 }
 
-/* Gradients from Figma: Welcome Banner, AI Assistant card, game tile */
+/* Gradients from Figma: banner, AI card, CTA, upload tile and game tile */
 @utility bg-welcome-banner {
   background-image: linear-gradient(
     -29.46deg,
@@ -198,6 +208,26 @@
     var(--brand-tertiary) 7.5565%,
     rgb(95 103 52) 9.513%,
     rgb(124 169 136) 51.878%,
+    var(--brand-tertiary) 111.31%
+  );
+}
+
+@utility bg-cta-gradient {
+  background-image: linear-gradient(
+    130.56deg,
+    var(--brand-tertiary) 7.5565%,
+    rgb(95 103 52) 52.953%,
+    var(--scheme-primary) 92.185%,
+    var(--brand-tertiary) 111.31%
+  );
+}
+
+@utility bg-upload-tile {
+  background-image: linear-gradient(
+    102.61deg,
+    var(--brand-tertiary) 7.5565%,
+    rgb(95 103 52) 9.513%,
+    var(--scheme-primary) 51.878%,
     var(--brand-tertiary) 111.31%
   );
 }

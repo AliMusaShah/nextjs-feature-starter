@@ -3,12 +3,13 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"
 
 const cardVariants = cva(
-  "flex rounded-card border border-outline/18 bg-card p-4 text-card-foreground",
+  "flex rounded-card border bg-card p-4 text-card-foreground",
   {
     variants: {
       variant: {
-        stat: "shadow-ds-100",
-        panel: "flex-col gap-5 shadow-panel",
+        stat: "border-outline/18 shadow-ds-100",
+        panel: "flex-col gap-5 border-outline/18 shadow-panel",
+        note: "flex-col justify-between border-outline/16 shadow-ds-100",
       },
     },
     defaultVariants: {
