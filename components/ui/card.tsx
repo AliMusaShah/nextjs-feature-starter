@@ -11,6 +11,9 @@ const cardVariants = cva(
         panel: "flex-col gap-5 border-outline/18 shadow-panel",
         note: "flex-col justify-between border-outline/16 shadow-ds-100",
         row: "min-h-26.75 flex-col justify-center gap-3 border-outline/16 shadow-ds-100 xl:flex-row xl:items-center xl:justify-between",
+        section: "flex-col gap-6 border-modal-border",
+        chart:
+          "flex-col items-center justify-between gap-6 rounded-[15px] border-[1.078px] border-grey-5 px-4.5 pt-5 pb-5.75",
       },
     },
     defaultVariants: {

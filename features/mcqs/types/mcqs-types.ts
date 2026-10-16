@@ -1,3 +1,5 @@
+import type { LeaderboardEntry } from "@/components/ui/leaderboard-row"
+
 export type McqSet = {
   id: string
   title: string
@@ -10,12 +12,6 @@ export type LeaderboardGame = {
   label: string
 }
 
-export type LeaderboardEntry = {
-  id: string
-  initials: string
-  name: string
-  points: number
-  streakDays: number
+export type McqLeaderboardEntry = LeaderboardEntry & {
   game: string
-  isCurrentUser: boolean
 }

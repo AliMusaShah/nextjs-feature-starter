@@ -1,6 +1,6 @@
 import type {
-  LeaderboardEntry,
   LeaderboardGame,
+  McqLeaderboardEntry,
   McqSet,
 } from "../types/mcqs-types"
 
@@ -39,7 +39,7 @@ export const mockLeaderboardGames: LeaderboardGame[] = [
 
 const leaderboardGameCycle = mockLeaderboardGames.map((game) => game.value)
 
-export const mockLeaderboard: LeaderboardEntry[] = Array.from(
+export const mockLeaderboard: McqLeaderboardEntry[] = Array.from(
   { length: 7 },
   (_, index) => ({
     id: `player-${index + 1}`,
