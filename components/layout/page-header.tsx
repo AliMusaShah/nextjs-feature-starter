@@ -3,14 +3,18 @@ import Link from "next/link"
 import { BubbleIcon } from "@/components/ui/bubble-icon"
 import { buttonVariants } from "@/components/ui/button"
 
+type PageHeaderAction = { label: string } & (
+  | { href: string; onClick?: never }
+  | { onClick: () => void; href?: never }
+)
+
 type PageHeaderProps = {
   title: string
   description: string
-  action?: {
-    label: string
-    href: string
-  }
+  action?: PageHeaderAction
 }
+
+const actionClassName = buttonVariants({ variant: "gradient", size: "action" })
 
 function PageHeader({ title, description, action }: PageHeaderProps) {
   return (
@@ -23,14 +27,16 @@ function PageHeader({ title, description, action }: PageHeaderProps) {
           {description}
         </p>
       </div>
-      {action ? (
-        <Link
-          href={action.href}
-          className={buttonVariants({ variant: "gradient", size: "action" })}
-        >
+      {action?.href !== undefined ? (
+        <Link href={action.href} className={actionClassName}>
           <BubbleIcon src="/icons/generate-bubble.svg" />
           {action.label}
         </Link>
+      ) : action ? (
+        <button type="button" onClick={action.onClick} className={actionClassName}>
+          <BubbleIcon src="/icons/generate-bubble.svg" />
+          {action.label}
+        </button>
       ) : null}
     </header>
   )

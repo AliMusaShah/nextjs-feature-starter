@@ -4,6 +4,7 @@ import { cn } from "cn"
 
 import { buttonVariants } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import { OptionsButton } from "@/components/ui/options-button"
 
 type FileCardProps = {
   title: string
@@ -32,19 +33,7 @@ function FileCard({ title, href, children }: FileCardProps) {
             {children}
           </div>
         </div>
-        <button
-          type="button"
-          aria-label={`Options for ${title}`}
-          className="mt-1 flex size-6 shrink-0 items-center justify-center rounded-md outline-none focus-visible:ring-3 focus-visible:ring-brand/40"
-        >
-          <Image
-            src="/icons/more-vert.svg"
-            alt=""
-            width={24}
-            height={24}
-            className="size-6"
-          />
-        </button>
+        <OptionsButton label={`Options for ${title}`} className="mt-1" />
       </div>
       <div className="flex flex-col gap-2.25">
         <div className="flex h-34.5 items-center justify-center overflow-clip rounded-[7px] bg-brand-tertiary/10 p-2.5">

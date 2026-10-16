@@ -19,6 +19,12 @@
   --color-secondary-container: var(--secondary-container);
   --color-error: var(--error);
   --color-tab-track: var(--tab-track);
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-error-container: var(--error-container);
+  --color-modal-border: var(--modal-border);
+  --color-modal-surface: var(--modal-surface);
+  --color-label: var(--label);
   --color-primary-container: var(--primary-container);
   --color-primary-fixed-dim: var(--primary-fixed-dim);
   --color-scheme-primary: var(--scheme-primary);
@@ -147,6 +153,12 @@
   --streak-to: #ffe551;
   --arena-ring: #6cd3fa;
   --tab-track: #e8f6e8;
+  --tertiary-fixed: #beeaf7;
+  --on-tertiary-container: #214c57;
+  --error-container: #ffdad6;
+  --modal-border: #dde1e6;
+  --modal-surface: #fcfefc;
+  --label: #43484b;
 }
 
 .dark {
@@ -189,10 +201,11 @@
   --shadow-ds-200: 0 1px 4px 0 rgb(12 12 13 / 10%), 0 1px 4px 0 rgb(12 12 13 / 5%);
   --shadow-ds-300: 0 4px 4px -1px rgb(12 12 13 / 10%), 0 4px 4px -1px rgb(12 12 13 / 5%);
   --shadow-panel: 0 1px 5.3px 0 rgb(58 100 111 / 8%);
+  --shadow-card: 0 1px 16.9px 0 rgb(12 12 13 / 6%);
   --shadow-tile: 0 4px 4px 0 rgb(0 0 0 / 4%);
 }
 
-/* Gradients from Figma: banner, AI card, CTA, upload tile and game tile */
+/* Gradients from Figma: banner, AI card, CTA, upload tile, game tile */
 @utility bg-welcome-banner {
   background-image: linear-gradient(
     -29.46deg,

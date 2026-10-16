@@ -18,6 +18,8 @@ const buttonVariants = cva(
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
         brand: "bg-brand text-brand-foreground hover:bg-brand/90",
+        brandOutline:
+          "border-brand text-brand hover:bg-brand/10",
         gradient:
           "border-primary-container bg-cta-gradient text-brand-foreground shadow-ds-300 hover:brightness-110",
         tertiary:
@@ -30,6 +32,10 @@ const buttonVariants = cva(
         sm: "h-7 gap-1 rounded-[min(var(--radius-md),12px)] px-2.5 text-[0.8rem] in-data-[slot=button-group]:rounded-lg has-data-[icon=inline-end]:pr-1.5 has-data-[icon=inline-start]:pl-1.5 [&_svg:not([class*='size-'])]:size-3.5",
         lg: "h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2",
         action: "h-auto gap-1.5 rounded-2xl px-3.5 py-2.5 text-sm font-bold",
+        compact:
+          "h-auto gap-1 rounded-[14px] px-5.25 py-2.25 text-xs tracking-[0.03em]",
+        block:
+          "h-11.5 w-full rounded-4xl px-2.5 py-2 text-base font-semibold shadow-ds-100",
         icon: "size-8",
         "icon-xs":
           "size-6 rounded-[min(var(--radius-md),10px)] in-data-[slot=button-group]:rounded-lg [&_svg:not([class*='size-'])]:size-3",
