@@ -8,3 +8,12 @@ export type AuthState = {
   setAccess: (access: string, refresh?: string) => void;
   logout: () => void;
 };
+
+export type UserRole = "student" | "teacher";
+
+export type RoleOption = {
+  value: UserRole;
+  label: string;
+  iconSrc: string;
+  iconClassName: string;
+};

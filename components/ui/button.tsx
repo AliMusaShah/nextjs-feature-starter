@@ -34,6 +34,8 @@ const buttonVariants = cva(
         action: "h-auto gap-1.5 rounded-2xl px-3.5 py-2.5 text-sm font-bold",
         compact:
           "h-auto gap-1 rounded-[14px] px-5.25 py-2.25 text-xs tracking-[0.03em]",
+        pill: "h-9 rounded-[20px] px-8 text-sm tracking-[0.03em]",
+        send: "h-auto rounded-[20px] px-2.5 py-2 text-sm tracking-[0.375px]",
         block:
           "h-11.5 w-full rounded-4xl px-2.5 py-2 text-base font-semibold shadow-ds-100",
         icon: "size-8",

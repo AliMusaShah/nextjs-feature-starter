@@ -1,7 +1,8 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
+
+import { BrandMark } from "@/components/ui/brand-mark"
 
 import { AiAssistantCard } from "./ai-assistant-card"
 import { SidebarNavItem } from "./sidebar-nav-item"
@@ -20,15 +21,7 @@ function Sidebar({ onNavigate }: SidebarProps) {
           onClick={onNavigate}
           className="flex items-center gap-2.5 rounded-md outline-none focus-visible:ring-3 focus-visible:ring-brand/40"
         >
-          <span className="flex shrink-0 rounded-md bg-brand p-3">
-            <Image
-              src="/icons/logo-mark.svg"
-              alt=""
-              width={21}
-              height={21}
-              className="size-5.25"
-            />
-          </span>
+          <BrandMark />
           <span className="flex flex-col items-start justify-center gap-1">
             <span className="text-xl leading-[1.1] font-bold text-on-primary-fixed">
               Parhai.pk

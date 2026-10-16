@@ -28,6 +28,7 @@
   --color-grey-1: var(--grey-1);
   --color-grey-5: var(--grey-5);
   --color-filter-text: var(--filter-text);
+  --color-chat-bubble: var(--chat-bubble);
   --color-chart-green: var(--chart-green);
   --color-chart-orange: var(--chart-orange);
   --color-chart-red: var(--chart-red);
@@ -169,6 +170,7 @@
   --grey-1: #333333;
   --grey-5: #e0e0e0;
   --filter-text: #384b3d;
+  --chat-bubble: #f7f7f7;
   --chart-green: #5eb17f;
   --chart-orange: #ffb663;
   --chart-red: #c86e6e;
@@ -219,7 +221,7 @@
   --shadow-tile: 0 4px 4px 0 rgb(0 0 0 / 4%);
 }
 
-/* Gradients from Figma: banner, AI card, CTA, upload tile, game tile. */
+/* Gradients from Figma: banner, AI card, AI page, chat area, role chip, CTA, upload tile, profile card, game tile */
 @utility bg-welcome-banner {
   background-image: linear-gradient(
     -29.46deg,
@@ -236,6 +238,35 @@
     rgb(95 103 52) 9.513%,
     rgb(124 169 136) 51.878%,
     var(--brand-tertiary) 111.31%
+  );
+}
+
+@utility bg-assistant-banner {
+  background-image: linear-gradient(
+    153.15deg,
+    var(--brand-tertiary) 7.5565%,
+    rgb(95 103 52) 9.513%,
+    rgb(124 169 136) 51.878%,
+    var(--brand-tertiary) 111.31%
+  );
+}
+
+@utility bg-assistant-avatar {
+  background-image: linear-gradient(
+    102.51deg,
+    var(--brand-tertiary) 7.5565%,
+    rgb(95 103 52) 9.513%,
+    rgb(124 169 136) 51.878%,
+    var(--brand-tertiary) 111.31%
+  );
+}
+
+@utility bg-chat-area {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(114 219 155 / 20%),
+    rgb(132 196 157 / 20%) 50%,
+    rgb(202 212 157 / 20%)
   );
 }
 
@@ -257,6 +288,21 @@
     var(--scheme-primary) 51.878%,
     var(--brand-tertiary) 111.31%
   );
+}
+
+@utility bg-profile-card {
+  background-image: linear-gradient(
+    22.49deg,
+    rgb(95 103 52) 5.5134%,
+    rgb(124 169 136) 69.212%,
+    var(--brand-tertiary) 131.29%
+  );
+}
+
+@utility bg-role-chip-active {
+  background-image:
+    linear-gradient(rgb(255 255 255 / 42%), rgb(255 255 255 / 42%)),
+    linear-gradient(rgb(132 196 157 / 24%), rgb(132 196 157 / 24%));
 }
 
 @utility bg-game-tile {

@@ -1,6 +1,11 @@
 import Image from "next/image"
 import { cn } from "cn"
 
+import {
+  fieldControlClassName,
+  fieldLabelClassName,
+} from "@/components/ui/field-styles"
+
 type SelectFieldProps = Omit<React.ComponentProps<"select">, "children"> & {
   label: string
   placeholder: string
@@ -17,10 +22,7 @@ function SelectField({
 }: SelectFieldProps) {
   return (
     <div className="flex flex-col gap-4">
-      <label
-        htmlFor={id}
-        className="text-base leading-none font-medium text-label"
-      >
+      <label htmlFor={id} className={fieldLabelClassName}>
         {label}
       </label>
       <div className="relative">
@@ -28,7 +30,8 @@ function SelectField({
           id={id}
           defaultValue=""
           className={cn(
-            "w-full appearance-none rounded-xl border border-primary-fixed-dim/37 bg-tab-track/65 px-3 py-4 pr-12 font-secondary text-sm leading-none text-heading outline-none focus-visible:ring-3 focus-visible:ring-brand/40 invalid:text-heading/60",
+            fieldControlClassName,
+            "appearance-none pr-12 font-secondary invalid:text-heading/60",
             className
           )}
           {...props}
